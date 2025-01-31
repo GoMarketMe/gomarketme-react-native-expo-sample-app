@@ -1,38 +1,53 @@
 {
   "expo": {
-    "name": "ReactNativeExpoTypeScriptSampleApp",
-    "slug": "ReactNativeExpoTypeScriptSampleApp",
-    "version": "1.0.0",
+    "name": "ReactNativeExpoSampleApp",
+    "slug": "ReactNativeExpoSampleApp",
+    "version": "2.5.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "co.gomarketme.reactnativeexpotypescriptsampleapp"
+      "bundleIdentifier": "ai.compassmaps.scenicdrives"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "co.gomarketme.reactnativeexpotypescriptsampleapp"
+      "package": "ai.compassmaps.scenicdrives",
+      "versionCode": 2502
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "dbedc7d9-b47d-49fe-b520-8dd4247f2b01"
-      }
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "react-native-iap",
-      "expo-localization"
-    ]
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "24793871-fee4-44a2-aaea-70ab3dfa81df"
+      }
+    }
   }
 }
